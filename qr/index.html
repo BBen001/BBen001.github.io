@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="card-title"></title>
+
+    <link rel="stylesheet" href="/css/card.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..9001,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section class="card">
+        <div class="img"></div>
+    </section>
+    <style></style>
+
+    <script>
+        function getCardId() {
+            const params = new URLSearchParams(window.location.search)
+            return params.get('id')
+        }
+
+        fetch('/qr/data.json')
+            .then(response => response.json())
+            .then(data => {
+                const cardId = getCardId()
+                const card = data[cardId]
+
+                console.log(cardId, card)
+
+                if (card) {
+                    document.title = cardId
+                    document.querySelector("style").textContent = `:root {--img : url('${card.img}');}`
+                }
+            })
+    </script>
+</body>
+</html>

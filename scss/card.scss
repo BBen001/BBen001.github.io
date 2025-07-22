@@ -1,0 +1,28 @@
+body {
+  margin: 0;
+}
+
+.card {
+  box-sizing: border-box;
+  width: 100vw;
+  height: 100svh;
+  padding: 2rem;
+
+  .img {
+    box-sizing: border-box;
+    height: 100%;
+    aspect-ratio: 3 / 4;
+    background-repeat: no-repeat;
+    margin: auto;
+
+    border-radius: 16px;
+    border: 6px solid #333;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+
+    background-image: var(--img);
+    background-color: #aaa;
+  
+    overflow: hidden;
+    font-family: 'Montserrat', sans-serif;
+  }
+}
