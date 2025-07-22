@@ -13,8 +13,9 @@
 </head>
 <body>
     <section class="banner">
-        <div><div></div></div>
-        <img id="territorio-img" src="" alt="">
+        <img id="territorio-banner" ></img>
+        <div></div>
+        <img id="territorio-img">
     </section>
     <section class="content">
         <header>
@@ -31,7 +32,7 @@
             return params.get('id');
         }
 
-        fetch('data.json')
+        fetch('/territorios/data.json')
             .then(response => response.json())
             .then(data => {
                 const territorioId = getTerritorioId();
@@ -39,6 +40,8 @@
 
                 if (territorio) {
                     document.title = territorio.name;
+                    document.getElementById("territorio-banner").src = `/img/${territorioId}.png`;
+                    document.getElementById("territorio-banner").alt = `imagen de ${territorio.name}`;
                     document.getElementById("territorio-img").src = `/img/${territorioId}.png`;
                     document.getElementById("territorio-img").alt = `imagen de ${territorio.name}`;
                     document.getElementById("territorio-name").textContent = territorio.name;

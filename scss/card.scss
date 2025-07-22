@@ -8,7 +8,7 @@ body {
   height: 100svh;
   padding: 2rem;
 
-  .img {
+  div {
     box-sizing: border-box;
     height: 100%;
     aspect-ratio: 3 / 4;
@@ -16,13 +16,22 @@ body {
     margin: auto;
 
     border-radius: 16px;
-    border: 6px solid #333;
-    box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+    border: 6px double #333;
+    box-shadow: -10px 10px 20px 5px #0003;
 
     background-image: var(--img);
-    background-color: #aaa;
+    background-color: #fff;
   
     overflow: hidden;
     font-family: 'Montserrat', sans-serif;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    & > * {
+      padding: 2em;
+    }
   }
 }

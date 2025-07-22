@@ -13,9 +13,8 @@
 </head>
 <body>
     <section class="card">
-        <div class="img"></div>
+        <div></div>
     </section>
-    <style></style>
 
     <script>
         function getCardId() {
@@ -26,14 +25,12 @@
         fetch('/qr/data.json')
             .then(response => response.json())
             .then(data => {
-                const cardId = getCardId()
-                const card = data[cardId]
-
-                console.log(cardId, card)
+                const card = data[getCardId()]
 
                 if (card) {
-                    document.title = cardId
-                    document.querySelector("style").textContent = `:root {--img : url('${card.img}');}`
+                    const element = document.createElement(card.type == "title" ? 'h2' : 'div')
+                    element.textContent = card.content
+                    document.querySelector('.card div').appendChild(element)
                 }
             })
     </script>

@@ -6,31 +6,36 @@ body {
 .banner {
     height: 25svh;
     padding-bottom: 2.5svh;
+    position: relative;
 
-    div {
+    #territorio-banner {
         height: 100%;
         width: 100%;
-        background-image: var(--image);
-        background-size: cover;
-        background-position: center;
-
-        div {
-            backdrop-filter: blur(10px);
-            height: 100%;
-            width: 100%;
-            background: linear-gradient(
-                to bottom,
-                transparent 0%,
-                white 80%
-            );
-        }
+        position: relative;
+        z-index: 0;
     }
 
-    img {
+    div {
+        backdrop-filter: blur(20px);
+        height: 100%;
+        width: 100%;
+        background: linear-gradient(
+            to bottom,
+            transparent 0%,
+            white 80%
+        );
+
+        position: absolute;
+        top: 0;
+        z-index: 1;
+    }
+
+    #territorio-img {
         display: block;
 
         position: absolute;
         top: 0;
+        z-index: 2;
 
         box-sizing: border-box;
         padding-top: 5svh;

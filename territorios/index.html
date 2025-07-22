@@ -18,19 +18,19 @@
         fetch('data.json')
             .then(response => response.json())
             .then(territorios => {
-                const list = document.getElementById("territorios-list");
+                const list = document.getElementById("territorios-list")
                 for (const territorioId in territorios) {
-                    const territorio = territorios[territorioId];
-                    const a = document.createElement("a");
-                    a.href = `/territorios/territorio?id=${territorioId}`;
+                    const territorio = territorios[territorioId]
+                    const a = document.createElement("a")
+                    a.href = `/territorios/territorio/index.html?id=${territorioId}`
                     a.innerHTML = `
                         <section class="territorio">
-                            <img src="/img/territorio_${territorioId}.png" alt="imagen de ${territorio.name}">
+                            <img src="/img/${territorioId}.png" alt="imagen de ${territorio.name}">
                             <p>${territorio.name.charAt(0).toUpperCase() + territorio.name.slice(1).toLowerCase()}</p>
-                        </section>`;
-                    list.appendChild(a);
+                        </section>`
+                    list.appendChild(a)
                 }
-            });
+            })
     </script>
 </body>
 </html>
