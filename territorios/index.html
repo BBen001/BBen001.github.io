@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title id="territorio-title"></title>
 
-    <link rel="stylesheet" href="territorio.css">
+    <link rel="stylesheet" href="/css/territorio.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -39,11 +39,11 @@
 
                 if (territorio) {
                     document.title = territorio.name;
-                    document.getElementById("territorio-img").src = `territorio_${territorioId}.png`;
+                    document.getElementById("territorio-img").src = `/img/${territorioId}.png`;
                     document.getElementById("territorio-img").alt = `imagen de ${territorio.name}`;
                     document.getElementById("territorio-name").textContent = territorio.name;
                     document.getElementById("territorio-desc").textContent = territorio.desc;
-                    document.querySelector("style").textContent = `:root {--image: url('territorio_${territorioId}.png');}`;
+                    document.querySelector("style").textContent = `:root {--image: url('/img/${territorioId}.png');}`;
                 } else {
                     document.getElementById("territorio-name").textContent = "Territorio no encontrado";
                     document.getElementById("territorio-desc").textContent = "";

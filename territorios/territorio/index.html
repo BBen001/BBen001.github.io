@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Territorios</title>
 
-    <link rel="stylesheet" href="territorios.css">
+    <link rel="stylesheet" href="/css/territorios.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,10 +22,10 @@
                 for (const territorioId in territorios) {
                     const territorio = territorios[territorioId];
                     const a = document.createElement("a");
-                    a.href = `territorio.html?id=${territorioId}`;
+                    a.href = `/territorios/territorio?id=${territorioId}`;
                     a.innerHTML = `
                         <section class="territorio">
-                            <img src="territorio_${territorioId}.png" alt="imagen de ${territorio.name}">
+                            <img src="/img/territorio_${territorioId}.png" alt="imagen de ${territorio.name}">
                             <p>${territorio.name.charAt(0).toUpperCase() + territorio.name.slice(1).toLowerCase()}</p>
                         </section>`;
                     list.appendChild(a);
