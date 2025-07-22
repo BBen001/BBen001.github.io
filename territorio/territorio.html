@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="territorio-title"></title>
+
+    <link rel="stylesheet" href="territorio.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section class="banner">
+        <div><div></div></div>
+        <img id="territorio-img" src="" alt="">
+    </section>
+    <section class="content">
+        <header>
+            <h1 id="territorio-name"></h1>
+        </header>
+        <p id="territorio-desc"></p>
+    </section>
+
+    <style></style>
+
+    <script>
+        function getTerritorioId() {
+            const params = new URLSearchParams(window.location.search);
+            return params.get('id');
+        }
+
+        fetch('data.json')
+            .then(response => response.json())
+            .then(data => {
+                const territorioId = getTerritorioId();
+                const territorio = data[territorioId];
+
+                if (territorio) {
+                    document.title = territorio.name;
+                    document.getElementById("territorio-img").src = `territorio_${territorioId}.png`;
+                    document.getElementById("territorio-img").alt = `imagen de ${territorio.name}`;
+                    document.getElementById("territorio-name").textContent = territorio.name;
+                    document.getElementById("territorio-desc").textContent = territorio.desc;
+                    document.querySelector("style").textContent = `:root {--image: url('territorio_${territorioId}.png');}`;
+                } else {
+                    document.getElementById("territorio-name").textContent = "Territorio no encontrado";
+                    document.getElementById("territorio-desc").textContent = "";
+                }
+            });
+    </script>
+</body>
+</html>

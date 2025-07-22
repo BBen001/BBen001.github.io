@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Territorios</title>
+
+    <link rel="stylesheet" href="territorios.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..9001,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section class="territorios" id="territorios-list"></section>
+
+    <script>
+        fetch('data.json')
+            .then(response => response.json())
+            .then(territorios => {
+                const list = document.getElementById("territorios-list");
+                for (const territorioId in territorios) {
+                    const territorio = territorios[territorioId];
+                    const a = document.createElement("a");
+                    a.href = `territorio.html?id=${territorioId}`;
+                    a.innerHTML = `
+                        <section class="territorio">
+                            <img src="territorio_${territorioId}.png" alt="imagen de ${territorio.name}">
+                            <p>${territorio.name.charAt(0).toUpperCase() + territorio.name.slice(1).toLowerCase()}</p>
+                        </section>`;
+                    list.appendChild(a);
+                }
+            });
+    </script>
+</body>
+</html>

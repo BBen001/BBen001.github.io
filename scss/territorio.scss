@@ -1,0 +1,57 @@
+body {
+    margin: 0;
+    font-family: Montserrat;
+}
+
+.banner {
+    height: 25svh;
+    padding-bottom: 2.5svh;
+
+    div {
+        height: 100%;
+        width: 100%;
+        background-image: var(--image);
+        background-size: cover;
+        background-position: center;
+
+        div {
+            backdrop-filter: blur(10px);
+            height: 100%;
+            width: 100%;
+            background: linear-gradient(
+                to bottom,
+                transparent 0%,
+                white 80%
+            );
+        }
+    }
+
+    img {
+        display: block;
+
+        position: absolute;
+        top: 0;
+
+        box-sizing: border-box;
+        padding-top: 5svh;
+
+        height: inherit;
+        width: 100%;
+        object-fit: contain;
+    }
+}
+
+.content {
+    header {
+        text-align: center;
+        font-size: 1.2em;
+    }
+    p {
+        box-sizing: border-box;
+        width: 35em;
+        max-width: 100vw;
+        margin: auto;
+        padding: 0 1em;
+        text-align: center;
+    }
+}

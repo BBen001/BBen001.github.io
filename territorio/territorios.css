@@ -1,0 +1,40 @@
+body {
+  margin: 0;
+  font-family: Montserrat;
+}
+
+.territorios {
+  display: flex;
+  flex-flow: column nowrap;
+  padding: 2rem;
+  gap: 2rem;
+  box-sizing: border-box;
+  width: 35em;
+  max-width: 100vw;
+  margin: auto;
+}
+.territorios a {
+  display: block;
+}
+.territorios a .territorio {
+  width: 100%;
+  position: relative;
+}
+.territorios a .territorio img {
+  display: block;
+  width: 100%;
+}
+.territorios a .territorio p {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0.5rem;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6666666667);
+  color: #FFF;
+  text-overflow: clip;
+}
+
+/*# sourceMappingURL=territorios.css.map */

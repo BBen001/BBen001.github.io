@@ -1,0 +1,5 @@
+{
+    "desierto": { "name": "Desierto", "desc": "Un lugar árido con arena y sol." },
+    "isla": { "name": "Isla", "desc": "Rodeada de agua y misterios." },
+    "cordillera": { "name": "cordillera", "desc": "Altas cumbres y aire fresco." }
+}
