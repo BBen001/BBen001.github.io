@@ -1,0 +1,70 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+    background-color: #0007;
+    padding: 35px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('img/papel arrugado textura.jpg');
+    color: #ffff;
+    margin: 0;
+    padding: 0px;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    box-sizing: border-box  ;
+    min-height: 100vh;
+}
+
+/* Header con imagen de fondo */
+header {
+    background-image: url('img/papel arrugado textura.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #020203;
+    padding: 34px 12px;
+    font-size: 1.em;
+    text-align: center;
+}
+
+/* Texto centrado */
+.texto-centrado {
+    text-align: center;
+    margin: 85px 0;
+    font-size: 1.2em;
+}
+
+.botones {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+/* Estilo de cada botón-imagen */
+.boton-imagen {
+    text-align: center;
+}
+
+.boton-imagen img {
+    width: 120px;
+    height: auto;
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+
+.boton-imagen img:hover {
+    transform: scale(1.1);
+}
+
+.boton-imagen p {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #020203;
+}

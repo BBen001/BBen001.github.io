@@ -5,34 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title id="card-title"></title>
 
-    <link rel="stylesheet" href="/css/card.css">
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..9001,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <section class="card">
-        <div></div>
-    </section>
-
-    <script>
-        function getCardId() {
-            const params = new URLSearchParams(window.location.search)
-            return params.get('id')
-        }
-
-        fetch('/qr/data.json')
-            .then(response => response.json())
-            .then(data => {
-                const card = data[getCardId()]
-
-                if (card) {
-                    const element = document.createElement(card.type == "title" ? 'h2' : 'div')
-                    element.textContent = card.content
-                    document.querySelector('.card div').appendChild(element)
-                }
-            })
-    </script>
+    
 </body>
-</html>

@@ -22,6 +22,16 @@
             <h1 id="territorio-name"></h1>
         </header>
         <p id="territorio-desc"></p>
+        <small>Territorio: <var class="territory"></var>km² · Poblacion: <var class="pob"></var></small>
+    </section>
+
+    <section class="recursos">
+        <h2>Flora</h2>
+        <ul id="flora-list"></ul>
+        <h2>Fauna</h2>
+        <ul id="fauna-list"></ul>
+        <h2>Materiales</h2>
+        <ul id="materiales-list"></ul>
     </section>
 
     <style></style>
@@ -47,6 +57,41 @@
                     document.getElementById("territorio-name").textContent = territorio.name;
                     document.getElementById("territorio-desc").textContent = territorio.desc;
                     document.querySelector("style").textContent = `:root {--image: url('/img/${territorioId}.png');}`;
+                    document.querySelector(".territory").textContent = territorio.territory || "";
+                    document.querySelector(".pob").textContent = territorio.pob || "";
+
+                    // Flora
+                    const floraList = document.getElementById("flora-list");
+                    floraList.innerHTML = "";
+                    if (Array.isArray(territorio.flora)) {
+                        territorio.flora.forEach(item => {
+                            const li = document.createElement("li");
+                            li.textContent = item;
+                            floraList.appendChild(li);
+                        });
+                    }
+
+                    // Fauna
+                    const faunaList = document.getElementById("fauna-list");
+                    faunaList.innerHTML = "";
+                    if (Array.isArray(territorio.fauna)) {
+                        territorio.fauna.forEach(item => {
+                            const li = document.createElement("li");
+                            li.textContent = item;
+                            faunaList.appendChild(li);
+                        });
+                    }
+
+                    // Materiales
+                    const materialesList = document.getElementById("materiales-list");
+                    materialesList.innerHTML = "";
+                    if (Array.isArray(territorio.materiales)) {
+                        territorio.materiales.forEach(item => {
+                            const li = document.createElement("li");
+                            li.textContent = item;
+                            materialesList.appendChild(li);
+                        });
+                    }
                 } else {
                     document.getElementById("territorio-name").textContent = "Territorio no encontrado";
                     document.getElementById("territorio-desc").textContent = "";

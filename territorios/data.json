@@ -1,5 +1,97 @@
 {
-    "desierto": { "name": "Desierto", "desc": "Un lugar árido con arena y sol." },
-    "isla": { "name": "Isla", "desc": "Rodeada de agua y misterios." },
-    "cordillera": { "name": "cordillera", "desc": "Altas cumbres y aire fresco." }
+    "desierto": { 
+        "name": "Desierto", 
+        "desc": "Un lugar árido con arena y sol. Superficie: 50.000 km² (como media provincia pequeña de Argentina). Ejemplo real: casi como la provincia de Tucumán.",
+        "territory": "50000",
+        "pob": "350",
+        "fauna": [
+            "La fauna es escasa pero resistente, y los animales cumplen funciones importantes: transporte, alimentación, defensa, etc.",
+            "Camélidos",
+            "Reptiles: iguanas, lagartos, geckos, serpientes",
+            "Insectos: escorpiones, arañas, hormigas adaptadas al calor",
+            "Aves: buitres, halcones, lechuzas",
+            "Mamíferos pequeños: zorros del desierto, roedores como vizcachas"
+        ],
+        "flora": [
+            "La vegetación está muy adaptada a la sequía, con raíces profundas o cuerpos que almacenan agua.",
+            "Cactus: guardan agua y dan frutas comestibles",
+            "Plantas suculentas: como la aloe vera, usada para medicina o cosmética",
+            "Arbustos espinosos: sirven para leña, cercas, medicina natural",
+            "Hierbas resistentes: gramas, pastos bajos que comen los animales",
+            "Palmeras datileras: dan frutas nutritivas (dátiles), sombra y madera"
+        ],
+        "materiales": [
+            "Litio: muy valioso para baterías y tecnología",
+            "Sal: se extrae de salinas. Sirve para conservar alimentos o comerciar",
+            "Cobre: mineral clave para construir herramientas y vender",
+            "Oro y plata: más escasos, pero muy valiosos",
+            "Azufre: usado para fertilizantes o productos químicos",
+            "Energía solar: gran potencial por la altísima radiación solar diaria",
+            "Piedra volcánica y arcilla: para construir o hacer cerámica"
+        ]
+    },
+    "cordillera": { 
+        "name": "Cordillera",
+        "desc": "Altas cumbres y aire fresco. Territorio montañoso, con menos de 1 hab/km². Ejemplo: 2.000 personas en aldeas de 100 a 300 habitantes.",
+        "territory": "300",
+        "pob": "2000",
+        "sociedad": [
+            "Comunidades autosuficientes, cooperación y conocimientos tradicionales.",
+            "Movilidad limitada por el terreno; caminos estacionales en verano.",
+            "Cultura oral, vínculos espirituales con la naturaleza, celebraciones de cosecha."
+        ],
+        "flora": [
+            "La vegetación cambia según la altitud, dividida en pisos ecológicos.",
+            "Piso inferior (hasta 2.000 m): pinos, cedros, abetos, arbustos espinosos, rosa mosqueta, menta silvestre, llantén.",
+            "Piso medio (2.000 a 3.200 m): pastizales de altura, achicoria de montaña, ortiga, matorrales como tola y queñoa.",
+            "Piso superior (3.200 a 4.500 m): musgos, líquenes, cojines vegetales, pequeñas flores silvestres en verano."
+        ],
+        "fauna": [
+            "Mamíferos: cabras montesas, guanacos o llamas, zorros colorados, pumas.",
+            "Aves: cóndor andino, águila mora, lechuza, pájaro carpintero andino.",
+            "Reptiles: lagartijas de roca, serpientes de altura.",
+            "Insectos: escarabajos adaptados al frío, abejas silvestres."
+        ],
+        "materiales": [
+            "Minerales comunes: cobre, hierro, carbón, piedra caliza y granito.",
+            "Minerales valiosos: oro, plata, litio (opcional).",
+            "Agua de deshielo: ríos, esencial para cultivo y consumo.",
+            "Bosques bajos: madera, leña, carbón vegetal.",
+            "Tierra fértil en terrazas: papa, maíz, quinoa.",
+            "Actividades: ganadería de altura, minería, silvicultura, agricultura de montaña, caza y pesca, turismo, artesanías, energía hidroeléctrica y solar."
+        ]
+    },
+    "isla": { 
+        "name": "Isla",
+        "desc": "Territorio rodeado de agua, clima templado y misterios. Superficie: 15 km², población: 120 personas en una aldea costera.",
+        "territory": "15",
+        "pob": "120",
+        "sociedad": [
+            "Comunidad pesquera y recolectora, vida sencilla y colaborativa.",
+            "Viviendas de madera y palma, organización en clanes familiares.",
+            "Fiestas de luna llena, leyendas sobre criaturas marinas."
+        ],
+        "flora": [
+            "Palmeras cocoteras: frutos, madera y sombra.",
+            "Manglares: protección costera y hábitat de fauna.",
+            "Helechos y arbustos tropicales.",
+            "Flores exóticas: hibiscos, orquídeas.",
+            "Algas marinas: alimento y fertilizante."
+        ],
+        "fauna": [
+            "Mamíferos: murciélagos frugívoros, roedores isleños.",
+            "Aves: gaviotas, albatros, colibríes, aves marinas.",
+            "Reptiles: lagartos pequeños, tortugas marinas.",
+            "Insectos: mariposas, abejas, cangrejos terrestres.",
+            "Vida marina: peces tropicales, pulpos, delfines cercanos."
+        ],
+        "materiales": [
+            "Pescado y mariscos: base alimenticia y comercial.",
+            "Frutas tropicales: coco, banana, mango.",
+            "Madera y palma: construcción y artesanías.",
+            "Sal marina: extracción artesanal.",
+            "Coral y conchas: decoración y trueque.",
+            "Energía eólica y solar: potencial para autosuficiencia."
+        ]
+    }
 }
